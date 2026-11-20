@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The personal profile of Azka Farid Arsyad — student, creative thinker, and aspiring Ustadz and Entrepreneur.">
+  <meta name="theme-color" content="#08142b">
+
+  <title>My Personal Profile | Azka Farid</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./MyPersonalProfile.css">
+  <script src="./MyPersonalProfile.js" defer></script>
+</head>
+
+<body>
+
+  <!-- PAGE LOADER -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">AF<span>.</span></div>
+    <div class="loader-line"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+
+      <a href="./Homepage.html" class="brand" aria-label="Azka Farid Homepage">
+        <img
+          src="./Images/Glossy_Blue_AF_Islamic_Monogram-removebg-preview.png"
+          alt="AF Islamic Monogram"
+          class="brand-logo"
+          onerror="this.style.display='none'"
+        >
+        <span class="brand-name">AZKA FARID</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Open navigation" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="./Homepage.html">Home</a>
+        <a href="./AboutMe.html">About Me</a>
+        <a href="#identity" class="active">My Profile</a>
+        <a href="./Education.html">Education</a>
+        <a href="./Portfolio.html">Portfolio</a>
+        <a href="./Contact.html">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="profile-hero">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      <div class="hero-pattern"></div>
+
+      <div class="container hero-layout">
+
+        <div class="hero-content reveal">
+          <span class="eyebrow light-eyebrow">
+            <i class="fa-solid fa-star-and-crescent"></i>
+            MY PERSONAL PROFILE
+          </span>
+
+          <p class="hero-intro">GET TO KNOW ME</p>
+
+          <h1>
+            AZKA FARID
+            <span>ARSYAD.</span>
+          </h1>
+
+          <p class="hero-description">
+            A student who believes in beneficial knowledge,
+            good character, creativity, and continuous growth.
+          </p>
+
+          <div class="hero-tags">
+            <span>Student</span>
+            <span>Creative Thinker</span>
+            <span>Lifelong Learner</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#identity" class="btn btn-primary">
+              Explore My Profile
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+            <a href="./AboutMe.html" class="btn btn-outline-light">
+              About Me
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+
+          <p class="hero-motto">
+            “Know Yourself. Build Your Future.”
+          </p>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="photo-glow"></div>
+          <div class="photo-frame">
+            <img
+              src="./Images/Azka Profile Handsome.png"
+              alt="Azka Farid profile portrait"
+              class="profile-photo"
+              id="profilePhoto"
+            >
+            <div class="photo-fallback" id="photoFallback">
+              <span>AF</span>
+              <small>AZKA FARID</small>
+            </div>
+          </div>
+
+          <div class="floating-card floating-card-top">
+            <i class="fa-solid fa-book-open"></i>
+            <span>Knowledge</span>
+          </div>
+
+          <div class="floating-card floating-card-bottom">
+            <i class="fa-solid fa-heart"></i>
+            <span>Good Character</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="hero-bottom-line"></div>
+    </section>
+
+    <!-- SECTION NAVIGATION -->
+    <section class="section-navigation">
+      <div class="container">
+        <div class="section-nav-inner">
+          <a href="#identity">Identity</a>
+          <a href="#background">Background</a>
+          <a href="#character">Character</a>
+          <a href="#philosophy">Philosophy</a>
+          <a href="#values">Values</a>
+          <a href="#goals">Goals</a>
+          <a href="#aspirations">Aspirations</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 ABOUT MYSELF -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">01 — ABOUT MYSELF</span>
+          <h2>Who <span>Am I?</span></h2>
+          <p>A little introduction to the person behind this profile.</p>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="about-icon">
+            <i class="fa-solid fa-user-astronaut"></i>
+          </div>
+
+          <div class="about-text">
+            <h3>My Personal Introduction</h3>
+            <p>
+              My name is <strong>Azka Farid Arsyad</strong>, and you can
+              call me <strong>Azka</strong>. I am a student who enjoys
+              helping others in doing good, exploring creativity through
+              design, playing basketball, and watching football matches.
+            </p>
+            <p>
+              I believe that life is not only about achieving personal
+              success, but also about becoming someone who brings
+              positive contributions to others.
+            </p>
+            <p>
+              I aspire to become an Ustadz and an entrepreneur. I want
+              to share beneficial Islamic knowledge and contribute
+              positively to society through da'wah. At the same time,
+              I hope to build a successful business that allows me to
+              support my parents, help people in need, and bring
+              benefits to others.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 PERSONAL IDENTITY -->
+    <section class="section identity-section" id="identity">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">02 — MY IDENTITY</span>
+          <h2>Personal <span>Identity.</span></h2>
+          <p>Basic information that introduces who I am.</p>
+        </div>
+
+        <div class="identity-grid">
+          <article class="identity-card reveal">
+            <span class="card-icon"><i class="fa-solid fa-signature"></i></span>
+            <small>FULL NAME</small>
+            <h3>Azka Farid Arsyad</h3>
+          </article>
+
+          <article class="identity-card reveal">
+            <span class="card-icon"><i class="fa-solid fa-user"></i></span>
+            <small>PREFERRED NAME</small>
+            <h3>Azka</h3>
+          </article>
+
+          <article class="identity-card reveal">
+            <span class="card-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+            <small>CURRENT ROLE</small>
+            <h3>Student</h3>
+          </article>
+
+          <article class="identity-card reveal">
+            <span class="card-icon"><i class="fa-solid fa-lightbulb"></i></span>
+            <small>PERSONAL FOCUS</small>
+            <h3>Learning & Growth</h3>
+          </article>
+
+          <article class="identity-card reveal identity-card-wide">
+            <span class="card-icon"><i class="fa-solid fa-compass"></i></span>
+            <small>FUTURE ASPIRATION</small>
+            <h3>Ustadz & Entrepreneur</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 PERSONAL BACKGROUND -->
+    <section class="section background-section" id="background">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">03 — PERSONAL BACKGROUND</span>
+          <h2>My Educational <span>Journey.</span></h2>
+          <p>Learning experiences that shape my knowledge and personal development.</p>
+        </div>
+
+        <div class="education-feature reveal">
+          <div class="education-year">
+            <span>EDUCATION PERIOD</span>
+            <strong>2023</strong>
+            <i class="fa-solid fa-arrow-down-long"></i>
+            <strong>2024</strong>
+          </div>
+
+          <div class="education-details">
+            <span class="education-label">SENIOR HIGH SCHOOL</span>
+            <h3>Pondok Tahfizh Plus Abudzar</h3>
+            <p>
+              My educational journey includes formal academic studies,
+              Qur'an memorization (Tahfizh Al-Qur'an), Islamic learning,
+              and Information Technology (IT).
+            </p>
+            <span class="education-duration">
+              <i class="fa-regular fa-calendar"></i>
+              Two-year educational period
+            </span>
+          </div>
+        </div>
+
+        <div class="learning-grid">
+          <article class="learning-card reveal">
+            <div class="learning-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3>Formal Education</h3>
+            <p>Senior High School (SMA) academic studies.</p>
+          </article>
+
+          <article class="learning-card reveal">
+            <div class="learning-icon"><i class="fa-solid fa-book-quran"></i></div>
+            <h3>Tahfizh Al-Qur'an</h3>
+            <p>Learning and memorizing the Holy Qur'an.</p>
+          </article>
+
+          <article class="learning-card reveal">
+            <div class="learning-icon"><i class="fa-solid fa-mosque"></i></div>
+            <h3>Islamic Studies</h3>
+            <p>Developing Islamic knowledge and understanding.</p>
+          </article>
+
+          <article class="learning-card reveal">
+            <div class="learning-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Information Technology</h3>
+            <p>Exploring technology, digital creativity, and programming.</p>
+          </article>
+        </div>
+
+        <div class="it-panel reveal">
+          <div>
+            <span class="eyebrow">IT LEARNING JOURNEY</span>
+            <h3>Technology & Creativity</h3>
+            <p>Skills and subjects I continue to explore.</p>
+          </div>
+
+          <div class="skill-tags">
+            <span><i class="fa-solid fa-palette"></i> Graphic Design</span>
+            <span><i class="fa-brands fa-html5"></i> HTML</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-brands fa-python"></i> Python — Beginner</span>
+          </div>
+
+          <p class="it-description">
+            I enjoy exploring technology and creativity because I believe
+            these skills can help me develop ideas, create meaningful
+            projects, and prepare for future opportunities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 PERSONAL CHARACTER -->
+    <section class="section character-section" id="character">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">04 — PERSONAL CHARACTER</span>
+          <h2>What <span>Defines Me?</span></h2>
+          <p>The qualities I want to practice and develop throughout my journey.</p>
+        </div>
+
+        <div class="character-grid">
+          <article class="character-card reveal">
+            <span class="character-number">01</span>
+            <i class="fa-solid fa-calendar-check"></i>
+            <h3>Disciplined</h3>
+            <p>Developing consistency and discipline in my daily life.</p>
+          </article>
+
+          <article class="character-card reveal">
+            <span class="character-number">02</span>
+            <i class="fa-solid fa-palette"></i>
+            <h3>Creative Thinker</h3>
+            <p>Enjoying creativity, design, and exploring new ideas.</p>
+          </article>
+
+          <article class="character-card reveal">
+            <span class="character-number">03</span>
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Responsible</h3>
+            <p>Learning to take responsibility for my actions and commitments.</p>
+          </article>
+
+          <article class="character-card reveal">
+            <span class="character-number">04</span>
+            <i class="fa-solid fa-users"></i>
+            <h3>Sociable</h3>
+            <p>Enjoying positive interactions and building good relationships.</p>
+          </article>
+
+          <article class="character-card reveal">
+            <span class="character-number">05</span>
+            <i class="fa-solid fa-book-open"></i>
+            <h3>Lifelong Learner</h3>
+            <p>Always eager to gain knowledge and improve myself.</p>
+          </article>
+
+          <article class="character-card reveal">
+            <span class="character-number">06</span>
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <h3>Helpful & Caring</h3>
+            <p>Enjoying opportunities to help others in doing good.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 PERSONAL PHILOSOPHY -->
+    <section class="section philosophy-section" id="philosophy">
+      <div class="container">
+        <div class="philosophy-card reveal">
+          <div class="philosophy-decoration decoration-one"></div>
+          <div class="philosophy-decoration decoration-two"></div>
+
+          <span class="eyebrow light-eyebrow">05 — PERSONAL PHILOSOPHY</span>
+          <h2>My Life <span>Philosophy.</span></h2>
+
+          <div class="quote-mark">“</div>
+          <blockquote>
+            Know Yourself.
+            <span>Build Your Future.</span>
+          </blockquote>
+
+          <p class="philosophy-description">
+            I believe that a meaningful life begins with remembering Allah,
+            seeking beneficial knowledge, and maintaining good character.
+          </p>
+
+          <div class="principle-list">
+            <p><i class="fa-solid fa-check"></i> Always remember Allah in everything I do.</p>
+            <p><i class="fa-solid fa-check"></i> Never stop learning and seeking beneficial knowledge.</p>
+            <p><i class="fa-solid fa-check"></i> Maintain good character and honesty.</p>
+            <p><i class="fa-solid fa-check"></i> Respect and honor my parents and teachers.</p>
+            <p><i class="fa-solid fa-check"></i> Never give up on pursuing meaningful goals.</p>
+            <p><i class="fa-solid fa-check"></i> Strive to bring benefits to others.</p>
+          </div>
+
+          <span class="philosophy-signature">AZKA FARID</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 PERSONAL VALUES -->
+    <section class="section values-section" id="values">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">06 — PERSONAL VALUES</span>
+          <h2>Principles I <span>Value.</span></h2>
+          <p>Values that I aspire to practice in my daily life.</p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card reveal">
+            <i class="fa-solid fa-moon"></i>
+            <h3>Faith</h3>
+            <p>Keeping faith and Islamic principles at the center of life.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <i class="fa-solid fa-book-open"></i>
+            <h3>Knowledge</h3>
+            <p>Seeking beneficial knowledge with humility.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <i class="fa-solid fa-scale-balanced"></i>
+            <h3>Honesty</h3>
+            <p>Striving to be truthful, sincere, and trustworthy.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <i class="fa-solid fa-user-check"></i>
+            <h3>Responsibility</h3>
+            <p>Being accountable for my duties and commitments.</p>
+          </article>
+
+          <article class="value-card reveal">
+            <i class="fa-solid fa-hands-holding-circle"></i>
+            <h3>Respect</h3>
+            <p>Honoring and respecting my parents and teachers.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 07 PERSONAL GOALS -->
+    <section class="section goals-section" id="goals">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">07 — PERSONAL GOALS</span>
+          <h2>What I Want to <span>Develop.</span></h2>
+          <p>Areas of knowledge and skills I aim to improve.</p>
+        </div>
+
+        <div class="goals-grid">
+          <article class="goal-card reveal">
+            <div class="goal-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div>
+              <h3>Information Technology</h3>
+              <p>Improving skills in design, web development, and programming.</p>
+            </div>
+          </article>
+
+          <article class="goal-card reveal">
+            <div class="goal-icon"><i class="fa-solid fa-book-quran"></i></div>
+            <div>
+              <h3>Islamic Knowledge</h3>
+              <p>Deepening Islamic knowledge and understanding.</p>
+            </div>
+          </article>
+
+          <article class="goal-card reveal">
+            <div class="goal-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+            <div>
+              <h3>Da'wah</h3>
+              <p>Developing the ability to share beneficial knowledge and contribute to society.</p>
+            </div>
+          </article>
+
+          <article class="goal-card reveal">
+            <div class="goal-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <div>
+              <h3>Entrepreneurship</h3>
+              <p>Learning how to build a responsible and meaningful business.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 FUTURE ASPIRATIONS -->
+    <section class="section aspirations-section" id="aspirations">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">08 — FUTURE ASPIRATIONS</span>
+          <h2>My Vision & <span>Dreams.</span></h2>
+          <p>A meaningful direction for the person I aspire to become.</p>
+        </div>
+
+        <div class="aspiration-hero reveal">
+          <div class="aspiration-glow"></div>
+          <span class="eyebrow light-eyebrow">MY FUTURE ASPIRATION</span>
+          <h3>Ustadz <span>&</span> Entrepreneur</h3>
+          <p>
+            My dream is to become an Ustadz and an entrepreneur who brings
+            meaningful contributions to society.
+          </p>
+          <div class="aspiration-tags">
+            <span>Islamic Knowledge</span>
+            <span>Leadership</span>
+            <span>Entrepreneurship</span>
+          </div>
+        </div>
+
+        <div class="contribution-grid">
+          <article class="contribution-card reveal">
+            <span>01</span>
+            <i class="fa-solid fa-mosque"></i>
+            <h3>Islamic Education</h3>
+            <p>
+              Contributing to the development of Islamic educational
+              institutions that help future generations gain beneficial knowledge.
+            </p>
+          </article>
+
+          <article class="contribution-card reveal">
+            <span>02</span>
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <h3>Community Empowerment</h3>
+            <p>
+              Helping improve community welfare and supporting people
+              who are in need.
+            </p>
+          </article>
+
+          <article class="contribution-card reveal">
+            <span>03</span>
+            <i class="fa-solid fa-briefcase"></i>
+            <h3>Entrepreneurship & Job Creation</h3>
+            <p>
+              Building meaningful businesses that support my parents
+              and create employment opportunities for others.
+            </p>
+          </article>
+        </div>
+
+        <p class="aspiration-note reveal">
+          I believe that success is not only measured by personal
+          achievements, but also by the positive impact we bring
+          to people's lives.
+        </p>
+      </div>
+    </section>
+
+    <!-- 09 CONTINUING JOURNEY -->
+    <section class="section journey-section" id="journey">
+      <div class="container">
+        <div class="journey-card reveal">
+          <span class="eyebrow">09 — MY CONTINUING JOURNEY</span>
+          <h2>Becoming Better,<br><span>Step by Step.</span></h2>
+          <p>
+            This is not the end of my story. It is a continuing journey
+            of learning, growth, faith, and meaningful aspirations.
+          </p>
+
+          <a href="./AboutMe.html" class="btn btn-primary">
+            Explore About Me
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <a href="./Homepage.html" class="footer-brand">
+        <span class="footer-monogram">AF</span>
+        <span>
+          <strong>AZKA FARID</strong>
+          <small>ISLAMIC PERSONAL BRANDING</small>
+        </span>
+      </a>
+
+      <p class="footer-motto">Know Yourself. Build Your Future.</p>
+
+      <div class="footer-links">
+        <a href="./Homepage.html">Home</a>
+        <a href="./AboutMe.html">About Me</a>
+        <a href="#identity">My Profile</a>
+      </div>
+
+      <p class="copyright">
+        © <span id="currentYear"></span> Azka Farid. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+</body>
+</html>

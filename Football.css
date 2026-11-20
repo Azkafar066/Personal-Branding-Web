@@ -1,0 +1,1683 @@
+/* =========================================================
+   AZKA FARID — FOOTBALL PASSION PAGE
+   File: Football.css
+   Version: Updated — Combined My Football Favorites
+   Design: Premium Modern Islamic Personal Branding
+   Theme: Navy • Electric Blue • Gold
+========================================================= */
+
+/* =========================================================
+   01. ROOT VARIABLES
+========================================================= */
+
+:root {
+  --navy: #08142b;
+  --navy-light: #102345;
+  --navy-soft: #142b50;
+
+  --blue: #2463eb;
+  --electric: #397bff;
+  --electric-light: #75a7ff;
+
+  --gold: #d7b46a;
+  --gold-light: #f1dba6;
+
+  --white: #ffffff;
+  --text-light: #dce5f5;
+  --muted: #9aabc5;
+
+  --surface: rgba(255, 255, 255, 0.045);
+  --border: rgba(255, 255, 255, 0.1);
+
+  --shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+  --transition: all 0.35s ease;
+}
+
+/* =========================================================
+   02. RESET & GLOBAL
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--navy);
+  color: var(--white);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-padding {
+  padding: 105px 0;
+}
+
+::selection {
+  background: var(--electric);
+  color: var(--white);
+}
+
+/* =========================================================
+   03. HEADER & NAVIGATION
+========================================================= */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(8, 20, 43, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.header.scrolled {
+  background: rgba(8, 20, 43, 0.96);
+  border-bottom-color: var(--border);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+}
+
+.nav-brand img {
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+}
+
+.nav-brand span {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-brand strong {
+  color: var(--electric-light);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-link {
+  position: relative;
+  color: var(--text-light);
+  font-size: 13px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold-light);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  border-radius: 5px;
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   04. BUTTONS
+========================================================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 50px;
+  padding: 0 23px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  box-shadow: 0 8px 25px rgba(215, 180, 106, 0.16);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 13px 30px rgba(215, 180, 106, 0.27);
+}
+
+.btn-outline {
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.btn-outline:hover {
+  color: var(--gold-light);
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   05. SECTION HEADING
+========================================================= */
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 17px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(30px, 4vw, 45px);
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+}
+
+.section-heading h2 span {
+  color: var(--electric-light);
+}
+
+.section-heading p {
+  max-width: 590px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   06. FOOTBALL HERO
+========================================================= */
+
+.football-hero {
+  position: relative;
+  min-height: 760px;
+  padding: 160px 0 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 75% 45%,
+      rgba(36, 99, 235, 0.19),
+      transparent 34%
+    ),
+    linear-gradient(120deg, #08142b 0%, #0b1c39 55%, #102345 100%);
+}
+
+.football-hero::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  top: -180px;
+  right: -100px;
+  border: 1px solid rgba(117, 167, 255, 0.1);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 45px rgba(117, 167, 255, 0.025),
+    0 0 0 90px rgba(117, 167, 255, 0.02);
+}
+
+.football-hero-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(8, 20, 43, 0.12), transparent);
+}
+
+.football-hero-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 65px;
+}
+
+.football-hero-text {
+  max-width: 650px;
+}
+
+.football-hero-text h1 {
+  margin: 23px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 1.12;
+  font-weight: 800;
+  letter-spacing: -2.5px;
+}
+
+.football-hero-text h1 span {
+  display: block;
+  color: var(--electric-light);
+}
+
+.football-hero-text > p {
+  max-width: 520px;
+  color: var(--text-light);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.hero-identity {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 42px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.identity-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.football-hero-visual {
+  position: relative;
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.football-visual-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(57, 123, 255, 0.18);
+  filter: blur(75px);
+}
+
+.football-icon-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 390px);
+  min-height: 370px;
+  padding: 45px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid rgba(117, 167, 255, 0.23);
+  border-radius: 28px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.09),
+    rgba(255, 255, 255, 0.025)
+  );
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(15px);
+}
+
+.football-icon-circle {
+  width: 145px;
+  height: 145px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid rgba(215, 180, 106, 0.5);
+  background: radial-gradient(
+    circle,
+    rgba(57, 123, 255, 0.3),
+    rgba(8, 20, 43, 0.8)
+  );
+  box-shadow:
+    0 0 50px rgba(57, 123, 255, 0.18),
+    inset 0 0 25px rgba(117, 167, 255, 0.1);
+}
+
+.football-icon-circle i {
+  color: var(--gold-light);
+  font-size: 76px;
+}
+
+.visual-small-text {
+  margin-top: 25px;
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.football-icon-card h2 {
+  margin-top: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.football-icon-card h2 span {
+  color: var(--electric-light);
+}
+
+.football-icon-card p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.football-floating-tag {
+  position: absolute;
+  right: -5px;
+  bottom: 55px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 19px;
+  color: var(--navy);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  border-radius: 9px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: var(--shadow);
+}
+
+.hero-bottom-decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 55px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.018);
+}
+
+.hero-bottom-decoration span {
+  color: rgba(220, 229, 245, 0.5);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+/* =========================================================
+   07. FOOTBALL INTRODUCTION
+========================================================= */
+
+.football-intro {
+  position: relative;
+  background: var(--navy);
+}
+
+.intro-content {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 45px;
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 35px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.intro-icon {
+  width: 115px;
+  height: 115px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  color: var(--gold-light);
+  background: linear-gradient(
+    145deg,
+    rgba(57, 123, 255, 0.23),
+    rgba(16, 35, 69, 0.8)
+  );
+  border: 1px solid rgba(117, 167, 255, 0.2);
+}
+
+.intro-icon i {
+  font-size: 52px;
+}
+
+.intro-text h3 {
+  margin-bottom: 13px;
+  font-family: "Poppins", sans-serif;
+  font-size: 23px;
+}
+
+.intro-text p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+/* =========================================================
+   08. MY FOOTBALL FAVORITES — MAIN SECTION
+========================================================= */
+
+.my-football-favorites {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 12% 25%,
+      rgba(36, 99, 235, 0.09),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 75%,
+      rgba(215, 180, 106, 0.045),
+      transparent 30%
+    ),
+    var(--navy-light);
+}
+
+/* Main section heading */
+
+.my-football-favorites .section-heading {
+  margin-bottom: 65px;
+}
+
+.my-football-favorites .section-heading h2 span {
+  color: var(--gold-light);
+}
+
+/* Subsection layout */
+
+.favorites-subsection {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.club-subsection {
+  padding-bottom: 70px;
+}
+
+.players-subsection {
+  padding-top: 70px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* Subsection heading */
+
+.favorites-subheading {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.favorites-sub-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.favorites-subheading h3 {
+  margin: 13px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(25px, 3.5vw, 34px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.favorites-subheading h3 span {
+  color: var(--electric-light);
+}
+
+.favorites-subheading p {
+  max-width: 570px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =========================================================
+   09. FAVORITE CLUB — REAL MADRID
+========================================================= */
+
+.club-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 55px;
+  border: 1px solid rgba(215, 180, 106, 0.2);
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.07),
+    rgba(255, 255, 255, 0.018)
+  );
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.club-card:hover {
+  border-color: rgba(215, 180, 106, 0.4);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.3);
+}
+
+.club-emblem-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.club-emblem-placeholder {
+  position: relative;
+  width: 205px;
+  height: 235px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+  color: var(--gold-light);
+  background: linear-gradient(
+    145deg,
+    rgba(215, 180, 106, 0.15),
+    rgba(16, 35, 69, 0.9)
+  );
+  border: 2px solid rgba(215, 180, 106, 0.6);
+  border-radius: 48% 48% 45% 45% / 25% 25% 65% 65%;
+  box-shadow:
+    0 0 35px rgba(215, 180, 106, 0.09),
+    inset 0 0 30px rgba(215, 180, 106, 0.08);
+}
+
+/* Real Madrid logo */
+
+.club-logo {
+  position: relative;
+  z-index: 1;
+  width: 155px;
+  height: 175px;
+  padding: 12px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.25));
+  transition: var(--transition);
+}
+
+.club-emblem-placeholder:hover .club-logo {
+  transform: scale(1.06);
+}
+
+.club-caption {
+  margin-top: 22px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+/* Club information */
+
+.club-label {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.club-information h3 {
+  margin: 13px 0 18px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(30px, 4vw, 43px);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.club-information h3 span {
+  color: var(--gold-light);
+}
+
+.club-information > p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.95;
+}
+
+/* Club values */
+
+.club-values {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.club-values div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--text-light);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.club-values i {
+  color: var(--gold);
+}
+
+/* Club motto */
+
+.club-motto {
+  margin-top: 35px;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  color: var(--gold-light);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   10. FAVORITE PLAYERS
+========================================================= */
+
+.players-grid {
+  max-width: 950px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.player-card {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  transition: var(--transition);
+}
+
+.player-card:hover {
+  transform: translateY(-9px);
+  border-color: rgba(117, 167, 255, 0.4);
+  box-shadow: var(--shadow);
+}
+
+.player-visual {
+  position: relative;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ronaldo-visual {
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(215, 180, 106, 0.22),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #152e51, #08142b);
+}
+
+.arda-visual {
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(57, 123, 255, 0.28),
+      transparent 45%
+    ),
+    linear-gradient(135deg, #12345a, #08142b);
+}
+
+.player-number {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.075);
+  font-family: "Poppins", sans-serif;
+  font-size: 115px;
+  font-weight: 800;
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* Player photo */
+
+.player-photo {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player-photo .player-placeholder {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: var(--gold-light);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 45px rgba(57, 123, 255, 0.13);
+}
+
+.player-photo .player-placeholder i {
+  font-size: 55px;
+}
+
+.player-country {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  z-index: 3;
+  color: var(--gold-light);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  pointer-events: none;
+}
+
+/* Player information */
+
+.player-information {
+  padding: 28px;
+}
+
+.player-role {
+  color: var(--gold);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.player-information h3 {
+  margin: 12px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.player-information h3 span {
+  color: var(--electric-light);
+}
+
+.player-information p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* Player tags */
+
+.player-tags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.player-tags span {
+  padding: 7px 12px;
+  color: var(--text-light);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 9px;
+  font-weight: 600;
+}
+
+/* =========================================================
+   11. FOOTBALL JOURNEY
+========================================================= */
+
+.football-journey {
+  background:
+    radial-gradient(
+      circle at 85% 50%,
+      rgba(36, 99, 235, 0.09),
+      transparent 35%
+    ),
+    var(--navy-light);
+}
+
+.journey-card {
+  position: relative;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 55px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.065),
+    rgba(255, 255, 255, 0.018)
+  );
+  box-shadow: var(--shadow);
+}
+
+.journey-decoration {
+  position: absolute;
+  top: -35px;
+  right: -25px;
+  color: rgba(117, 167, 255, 0.055);
+  font-size: 230px;
+  transform: rotate(-18deg);
+  pointer-events: none;
+}
+
+.journey-content {
+  position: relative;
+  z-index: 1;
+  max-width: 750px;
+}
+
+.journey-label {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+}
+
+.journey-content h3 {
+  margin: 16px 0 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(25px, 4vw, 36px);
+  line-height: 1.3;
+}
+
+.journey-content p {
+  margin-bottom: 16px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+
+.journey-signature {
+  margin-top: 35px;
+  padding-top: 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-top: 1px solid var(--border);
+}
+
+.journey-signature span:first-child {
+  color: var(--gold-light);
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.journey-signature span:last-child {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+/* =========================================================
+   12. CLOSING CTA
+========================================================= */
+
+.football-cta {
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(57, 123, 255, 0.2), transparent 55%),
+    linear-gradient(135deg, #102345, #08142b);
+}
+
+.football-cta h2 {
+  margin: 20px auto;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.football-cta h2 span {
+  display: block;
+  color: var(--electric-light);
+}
+
+.football-cta p {
+  margin-bottom: 30px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* =========================================================
+   13. FOOTER
+========================================================= */
+
+.footer {
+  padding: 55px 0 20px;
+  background: #060f20;
+  border-top: 1px solid var(--border);
+}
+
+.footer-content {
+  padding-bottom: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.footer-brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.footer-brand h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.footer-brand span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.footer-content > p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--gold-light);
+  font-size: 11px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.footer-back-link:hover {
+  color: var(--electric-light);
+  transform: translateX(-4px);
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.footer-bottom p,
+.footer-bottom span {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* =========================================================
+   14. PAGE ANIMATIONS
+========================================================= */
+
+body:not(.page-loaded) main {
+  opacity: 0;
+}
+
+body.page-loaded main {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes footballFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.football-icon-circle {
+  animation: footballFloat 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   15. RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .football-hero-content {
+    gap: 35px;
+  }
+
+  .football-hero-text h1 {
+    font-size: 60px;
+  }
+
+  .club-card {
+    gap: 35px;
+    padding: 38px;
+  }
+
+  .hero-bottom-decoration {
+    gap: 35px;
+  }
+}
+
+/* =========================================================
+   16. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 80px 0;
+  }
+
+  .navbar {
+    min-height: 75px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    position: relative;
+    z-index: 1002;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 75px;
+    right: -100%;
+    width: min(340px, 88%);
+    height: calc(100vh - 75px);
+    padding: 35px 28px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 25px;
+    background: rgba(8, 20, 43, 0.98);
+    border-left: 1px solid var(--border);
+    box-shadow: -15px 20px 40px rgba(0, 0, 0, 0.3);
+    transition: right 0.35s ease;
+    overflow-y: auto;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-link {
+    width: fit-content;
+    font-size: 14px;
+  }
+
+  /* Hero */
+
+  .football-hero {
+    min-height: auto;
+    padding: 140px 0 90px;
+  }
+
+  .football-hero-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .football-hero-text {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .football-hero-text h1 {
+    font-size: clamp(43px, 10vw, 65px);
+  }
+
+  .football-hero-text > p {
+    margin: 0 auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-identity {
+    justify-content: center;
+  }
+
+  .football-hero-visual {
+    min-height: 350px;
+  }
+
+  .football-icon-card {
+    max-width: 340px;
+    min-height: 330px;
+  }
+
+  .football-floating-tag {
+    right: 0;
+    bottom: 25px;
+  }
+
+  .hero-bottom-decoration {
+    gap: 17px;
+    padding: 0 10px;
+  }
+
+  .hero-bottom-decoration span {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+
+  /* Introduction */
+
+  .intro-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    padding: 35px 28px;
+    gap: 25px;
+  }
+
+  /* My Football Favorites */
+
+  .my-football-favorites .section-heading {
+    margin-bottom: 50px;
+  }
+
+  .favorites-subheading {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .favorites-subheading p {
+    margin: 0 auto;
+  }
+
+  .club-subsection {
+    padding-bottom: 50px;
+  }
+
+  .players-subsection {
+    padding-top: 50px;
+  }
+
+  /* Favorite Club */
+
+  .club-card {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 35px 25px;
+    text-align: center;
+  }
+
+  .club-values {
+    justify-content: center;
+  }
+
+  .club-motto {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Favorite Players */
+
+  .players-grid {
+    gap: 18px;
+  }
+
+  .player-information {
+    padding: 22px;
+  }
+
+  .player-information h3 {
+    font-size: 22px;
+  }
+
+  /* Football Journey */
+
+  .journey-card {
+    padding: 38px 30px;
+  }
+
+  /* Footer */
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   17. RESPONSIVE — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  /* Navigation */
+
+  .nav-brand img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-brand span {
+    font-size: 14px;
+  }
+
+  /* Hero */
+
+  .football-hero {
+    padding-top: 125px;
+  }
+
+  .football-hero-text h1 {
+    font-size: 42px;
+    letter-spacing: -1.5px;
+  }
+
+  .football-hero-text > p {
+    font-size: 13px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-identity {
+    gap: 8px;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .football-hero-visual {
+    min-height: 315px;
+  }
+
+  .football-icon-card {
+    min-height: 295px;
+    padding: 30px 20px;
+  }
+
+  .football-icon-circle {
+    width: 115px;
+    height: 115px;
+  }
+
+  .football-icon-circle i {
+    font-size: 60px;
+  }
+
+  .football-icon-card h2 {
+    font-size: 23px;
+  }
+
+  .football-floating-tag {
+    right: -5px;
+    bottom: 12px;
+    padding: 10px 13px;
+    font-size: 8px;
+  }
+
+  .hero-bottom-decoration {
+    gap: 10px;
+  }
+
+  .hero-bottom-decoration span {
+    font-size: 6px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Section headings */
+
+  .section-heading {
+    margin-bottom: 38px;
+  }
+
+  .section-heading h2 {
+    font-size: 29px;
+  }
+
+  .section-heading p {
+    font-size: 12px;
+  }
+
+  /* Introduction */
+
+  .intro-content {
+    padding: 28px 20px;
+  }
+
+  .intro-icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .intro-icon i {
+    font-size: 42px;
+  }
+
+  .intro-text h3 {
+    font-size: 20px;
+  }
+
+  .intro-text p {
+    font-size: 12px;
+  }
+
+  /* My Football Favorites */
+
+  .my-football-favorites .section-heading {
+    margin-bottom: 42px;
+  }
+
+  .favorites-subheading {
+    margin-bottom: 28px;
+  }
+
+  .favorites-subheading h3 {
+    font-size: 23px;
+  }
+
+  .favorites-subheading p {
+    font-size: 12px;
+  }
+
+  .favorites-sub-label {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .club-subsection {
+    padding-bottom: 40px;
+  }
+
+  .players-subsection {
+    padding-top: 40px;
+  }
+
+  /* Favorite Club */
+
+  .club-card {
+    padding: 30px 20px;
+  }
+
+  .club-emblem-placeholder {
+    width: 165px;
+    height: 195px;
+  }
+
+  .club-logo {
+    width: 125px;
+    height: 150px;
+    padding: 8px;
+  }
+
+  .club-information h3 {
+    font-size: 31px;
+  }
+
+  .club-information > p {
+    font-size: 12px;
+  }
+
+  .club-values {
+    gap: 13px;
+  }
+
+  .club-values div {
+    font-size: 10px;
+  }
+
+  /* Favorite Players */
+
+  .players-grid {
+    grid-template-columns: 1fr;
+    max-width: 390px;
+    margin: 0 auto;
+  }
+
+  .player-visual {
+    min-height: 230px;
+  }
+
+  .player-photo .player-placeholder {
+    width: 110px;
+    height: 110px;
+  }
+
+  .player-information h3 {
+    font-size: 25px;
+  }
+
+  /* Football Journey */
+
+  .journey-card {
+    padding: 30px 22px;
+  }
+
+  .journey-content h3 {
+    font-size: 25px;
+  }
+
+  .journey-content p {
+    font-size: 12px;
+  }
+
+  .journey-decoration {
+    font-size: 150px;
+  }
+
+  /* Closing CTA */
+
+  .football-cta {
+    padding: 80px 0;
+  }
+
+  .football-cta h2 {
+    font-size: 29px;
+  }
+
+  /* Footer */
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* =========================================================
+   18. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
